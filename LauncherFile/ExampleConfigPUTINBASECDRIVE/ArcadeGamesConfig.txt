@@ -1,0 +1,23 @@
+GAME 1 - PHOSPHENIA
+Name:
+PHOSPHENIA
+Creator:
+PHOSPHENIA TEAM
+Description:
+3D Platformer About Growing Up
+Image:
+C:\Users\jacks\Downloads\download.png
+Directory:
+D:\GameLibrary\steamapps\common\PHOSHPENIA\Build\Windows\PlatformerGame.exe
+
+GAME 1 - AL & FREDO
+Name:
+AL & FREDO
+Creator:
+Jackson's Capstone Team	
+Description:
+3D Platformer About Growing Up
+Image:
+C:\Users\jacks\Downloads\download.png
+Directory:
+D:\GameLibrary\steamapps\common\PHOSHPENIA\Build\Windows\PlatformerGame.exe
