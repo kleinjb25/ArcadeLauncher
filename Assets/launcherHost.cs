@@ -6,8 +6,10 @@ using System;
 using System.IO;
 using UnityEngine.Networking;
 using System.Diagnostics;
+using UnityEngine.Video;
 public class launcherHost : MonoBehaviour
 {
+    public VideoPlayer player;
     string Directory = "C:\\ArcadeGamesConfig.txt";
     public string readFile;
     public InputField textInput;
@@ -27,6 +29,7 @@ public class launcherHost : MonoBehaviour
     string[] lines;
     int gameCount;
     public GameObject topShowImage;
+    public GameObject mgdcImage;
     float topImageTime;
     public GameObject libraryObject;
     float inputTime;
@@ -36,6 +39,7 @@ public class launcherHost : MonoBehaviour
     public RawImage right1;
     public Animator caroAnim;
     public RawImage right2;
+
     private void Start()
     {
         string path = "Assets/Resources/test.txt";
@@ -61,31 +65,43 @@ public class launcherHost : MonoBehaviour
     }
     private void Update()
     {
+        player.enabled = (!creatorText.text.Contains("Game Design Club"));
         topShowImage.SetActive(Time.realtimeSinceStartup < topImageTime);
-        if (Time.realtimeSinceStartup < topImageTime)
-            return;
-        if (Time.realtimeSinceStartup > inputTime)
+        if (Time.realtimeSinceStartup > topImageTime)
         {
-            if (Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKeyDown(KeyCode.G))
+            if (!mgdcImage.activeInHierarchy)
             {
-                inputTime = Time.realtimeSinceStartup + 1f;
-                gameIndex++;
-                caroAnim.Play("caroLeft");
-                loadGame(gameIndex);
+                if (Time.realtimeSinceStartup > inputTime)
+                {
+                    if (Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKeyDown(KeyCode.G))
+                    {
+                        inputTime = Time.realtimeSinceStartup + 1f;
+                        gameIndex++;
+                        caroAnim.Play("caroLeft");
+                        loadGame(gameIndex);
+                    }
+                    else if (Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.D))
+                    {
+                        caroAnim.Play("caroRight");
+                        inputTime = Time.realtimeSinceStartup + 1f;
+                        gameIndex--;
+                        loadGame(gameIndex);
+                    }
+                }
             }
-            else if (Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.D))
+            if ((Input.GetKeyDown(KeyCode.Z) || Input.GetKeyDown(KeyCode.X) || Input.GetKeyDown(KeyCode.C) || Input.GetKeyDown(KeyCode.V) || Input.GetKeyDown(KeyCode.B) || Input.GetKeyDown(KeyCode.Space)) || (Input.GetKeyDown(KeyCode.Q) || Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.I) || Input.GetKeyDown(KeyCode.K)))
             {
-                caroAnim.Play("caroRight");
-                inputTime = Time.realtimeSinceStartup + 1f;
-                gameIndex--;
-                loadGame(gameIndex);
+                if (mgdcImage.activeInHierarchy || !creatorText.text.Contains("Game Design Club"))
+                {
+                    mgdcImage.SetActive(false);
+                    UnityEngine.Debug.Log("THE DIRECTORY IS a" + directories[gameIndex] + "asdfasdfasdfasdfasdfasdf");
+                    topImageTime = Time.realtimeSinceStartup + 15;
+                    runFile(directories[gameIndex]);
+                }
+                else
+                    mgdcImage.SetActive(true);
+
             }
-        }
-        if ((Input.GetKey(KeyCode.Z) || Input.GetKey(KeyCode.X) || Input.GetKey(KeyCode.C) || Input.GetKey(KeyCode.V) || Input.GetKey(KeyCode.B) || Input.GetKey(KeyCode.Space)) || (Input.GetKey(KeyCode.Q) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.I) || Input.GetKey(KeyCode.K)))
-        {
-            UnityEngine.Debug.Log("THE DIRECTORY IS a" + directories[gameIndex] + "asdfasdfasdfasdfasdfasdf");
-            topImageTime = Time.realtimeSinceStartup + 5;
-            runFile(directories[gameIndex]);
         }
     }
     public IEnumerator LoadImageFromIndex(int index, RawImage input)
