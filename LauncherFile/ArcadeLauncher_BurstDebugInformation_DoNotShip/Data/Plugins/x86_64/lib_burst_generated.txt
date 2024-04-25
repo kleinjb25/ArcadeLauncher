@@ -1,4 +1,4 @@
-Library: C:\Users\jacks\Documents\Unreal Projects\ArcadeLauncher\Temp\BurstOutput\Data\Plugins\x86_64\lib_burst_generated
+Library: D:\GitHub\ArcadeLauncher\Temp\BurstOutput\Data\Plugins\x86_64\lib_burst_generated
 --platform=Windows
 --backend=burst-llvm-15
 --target=AVX2
@@ -52,10 +52,10 @@ Library: C:\Users\jacks\Documents\Unreal Projects\ArcadeLauncher\Temp\BurstOutpu
 --assembly-defines=UnityEngine;
 --linker-options=PdbAltPath="ArcadeLauncher_Data/Plugins/x86_64/lib_burst_generated.pdb"
 --generate-link-xml=Temp\burst.link.xml
---temp-folder=C:\Users\jacks\Documents\Unreal Projects\ArcadeLauncher\Temp\Burst
+--temp-folder=D:\GitHub\ArcadeLauncher\Temp\Burst
 --key-folder=D:/Unity/Hub/Editor/Unity 2023.2.0f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport
---decode-folder=C:\Users\jacks\Documents\Unreal Projects\ArcadeLauncher\Library\Burst
---output=C:\Users\jacks\Documents\Unreal Projects\ArcadeLauncher\Temp\BurstOutput\Data\Plugins\x86_64\lib_burst_generated
+--decode-folder=D:\GitHub\ArcadeLauncher\Library\Burst
+--output=D:\GitHub\ArcadeLauncher\Temp\BurstOutput\Data\Plugins\x86_64\lib_burst_generated
 --pdb-search-paths=Temp/ManagedSymbols/
 
 --method=Unity.Burst.BurstCompiler+BurstCompilerHelper, Unity.Burst, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null::IsBurstEnabled()--8c2be93e18276203cbd918daa2748a10
@@ -147,10 +147,10 @@ Library: C:\Users\jacks\Documents\Unreal Projects\ArcadeLauncher\Temp\BurstOutpu
 --assembly-defines=UnityEngine;
 --linker-options=PdbAltPath="ArcadeLauncher_Data/Plugins/x86_64/lib_burst_generated.pdb"
 --generate-link-xml=Temp\burst.link.xml
---temp-folder=C:\Users\jacks\Documents\Unreal Projects\ArcadeLauncher\Temp\Burst
+--temp-folder=D:\GitHub\ArcadeLauncher\Temp\Burst
 --key-folder=D:/Unity/Hub/Editor/Unity 2023.2.0f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport
---decode-folder=C:\Users\jacks\Documents\Unreal Projects\ArcadeLauncher\Library\Burst
---output=C:\Users\jacks\Documents\Unreal Projects\ArcadeLauncher\Temp\BurstOutput\Data\Plugins\x86_64\lib_burst_generated
+--decode-folder=D:\GitHub\ArcadeLauncher\Library\Burst
+--output=D:\GitHub\ArcadeLauncher\Temp\BurstOutput\Data\Plugins\x86_64\lib_burst_generated
 --pdb-search-paths=Temp/ManagedSymbols/
 
 --method=Unity.Burst.BurstCompiler+BurstCompilerHelper, Unity.Burst, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null::IsBurstEnabled()--8c2be93e18276203cbd918daa2748a10

@@ -156,17 +156,28 @@ public class launcherHost : MonoBehaviour
             StartCoroutine(LoadImageFromIndex(index + 2, right2));
         }
     }
+    Process p;
+    float lastRunTime;
     public void runFile(string inputDirectory)
     {
+        if (p != null)
+        {
+            if (!p.HasExited)
+                p.Kill();
+        }
         int exeIndex = inputDirectory.LastIndexOf(".exe");
         if (exeIndex != -1)
         {
             inputDirectory = inputDirectory.Substring(0, exeIndex + 4); // Adding 4 to include ".exe"
         }
 
-        Process p = new Process();
+        p = new Process();
         p.StartInfo.UseShellExecute = true;
         p.StartInfo.FileName = inputDirectory;
-        p.Start();
+        if (p.Start())
+        {
+            lastRunTime = Time.realtimeSinceStartup + 5;
+        }
+        
     }
 }
