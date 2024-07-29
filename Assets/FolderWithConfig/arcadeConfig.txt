@@ -1,0 +1,251 @@
+GAME 1 - Gorg Story
+Name:
+Gorg Story
+Creator:
+Miami Game Design Club
+Description:
+3D Platformer About Gorg
+Players:
+1 Player
+Image:
+gorg.png
+Directory:
+GorgStory1\GorgStory1\MGDCPlatformer.exe
+
+GAME 2 - Ohio Simulator
+Name:
+Ohio Simulator
+Creator:
+Miami Game Design Club
+Description:
+Ohio Simulator
+Players:
+1 Player
+Image:
+ohio.png
+Directory:
+OhioSimulator2\OhioSimulator2\RacingGame.exe
+
+GAME 3 - Cupid Sim
+Name:
+Cupid Sim
+Creator:
+Miami Game Design Club
+Description:
+Cupid Sim
+Players:
+1 Player
+Image:
+cupid.png
+Directory:
+CupidSimulator\CupidSimulator\CupidSimulator2.exe
+
+GAME 4 - Miami Guys
+Name:
+Miami Guys
+Creator:
+Miami Game Design Club
+Description:
+Miami Guys
+Players:
+1-2 Players
+Image:
+miamiguys.png
+Directory:
+MiamiGuysFinal\MiamiGuysFinal\MultiplayerRunner.exe
+
+GAME 5 - Crawformon
+Name:
+Crawformon
+Creator:
+Miami Game Design Club
+Description:
+Crawformon
+Players:
+1 Player
+Image:
+krawdaddy.png
+Directory:
+Crawformon1\Crawformon1\Crawformon.exe
+
+GAME 6 - Astra Eternum
+Name:
+Astra Eternum
+Creator:
+Miami Game Design Club
+Description:
+Cat Platformer
+Players:
+1 Player
+Image:
+cat.png
+Directory:
+CatPlatformer\Windows\Practice.exe
+
+GAME 7 - Jungle Tanks
+Name:
+Jungle Tanks
+Creator:
+Miami Game Design Club
+Description:
+Jungle Tanks
+Players:
+1 Player
+Image:
+jungle.png
+Directory:
+JungleTanksWindows\Windows\UnrealTanks.exe
+
+GAME 8 - Kardboard Kombat
+Name:
+Kardboard Kombat
+Creator:
+Miami Game Design Club
+Description:
+Kardboard Kombat
+Players:
+2 Players
+Image:
+kardboard.png
+Directory:
+KardboardWindows\KardboardWindows\KardboardKombat.exe
+
+GAME 9 - Halloween Minigames
+Name:
+Halloween Minigames
+Creator:
+Miami Game Design Club
+Description:
+Halloween Minigames
+Players:
+1 Player
+Image:
+halloween.png
+Directory:
+HalloweenMinigamesWindows\HalloweenMinigamesWindows\HalloweenMinigames.exe
+
+GAME 10 - Turkey Hunting
+Name:
+Turkey Hunting
+Creator:
+Miami Game Design Club
+Description:
+Turkey Hunting
+Players:
+1 Player
+Image:
+corn.png
+Directory:
+TurkeyTPS\Build\My Project.exe
+
+GAME 11 - Redhawk Dash
+Name:
+Redhawk Dash
+Creator:
+Miami Game Design Club
+Description:
+Redhawk Dash
+Players:
+1 Player
+Image:
+dash.png
+Directory:
+redhawkdashwin\redhawkdashwin\2DAutoscroller.exe
+
+GAME 12 - Clown Punching
+Name:
+Clown Punching
+Creator:
+Miami Game Design Club
+Description:
+Clown Punching
+Players:
+1 Player
+Image:
+clown.png
+Directory:
+ClownPuncher\Build\MGDCGame1.exe
+
+GAME 13 - Circus Shootout
+Name:
+Circus Shootout
+Creator:
+Miami Game Design Club
+Description:
+Circus Shootout
+Players:
+1 Player
+Image:
+shoot.png
+Directory:
+CarnivalFPS\Windows1.0\MGDCFirstPerson2024.exe
+
+GAME 14 - Mini Golf
+Name:
+Mini Golf
+Creator:
+Miami Game Design Club
+Description:
+Mini Golf
+Players:
+1 Player
+Image:
+golf.png
+Directory:
+Golf\Build\GolfGame.exe
+
+GAME 15 - Crab Racing
+Name:
+Crab Racing
+Creator:
+Miami Game Design Club
+Description:
+Crab Racing
+Players:
+1 Player
+Image:
+krab.png
+Directory:
+CrabRacing\Build\RacingGame.exe
+
+GAME 16 - Miami Hero
+Name:
+Miami Hero
+Creator:
+Miami Game Design Club
+Description:
+Miami Hero
+Players:
+1 Player
+Image:
+berk.png
+Directory:
+MiamiHero\Build\MiamiHero.exe
+
+GAME 17 - GasCar
+Name:
+GasCar
+Creator:
+Miami Game Design Club
+Description:
+GasCar
+Players:
+1 Player
+Image:
+gascar.png
+Directory:
+MGDCRacingWindows\Windows\MGDCRacing.exe
+
+GAME 18 - Miami Balancing
+Name:
+Miami Balancing
+Creator:
+Miami Game Design Club
+Description:
+Miami Balancing
+Players:
+1 Player
+Image:
+stack.png
+Directory:
+MiamiStacker\Build\StackerGame.exe

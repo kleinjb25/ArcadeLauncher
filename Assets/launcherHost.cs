@@ -10,7 +10,7 @@ using UnityEngine.Video;
 public class launcherHost : MonoBehaviour
 {
     public VideoPlayer player;
-    string Directory = "C:\\ArcadeGamesConfig.txt";
+    string configPath = Application.dataPath + "/FolderWithConfig/";
     public string readFile;
     public InputField textInput;
     public List<String> titles;
@@ -39,19 +39,15 @@ public class launcherHost : MonoBehaviour
     public RawImage right1;
     public Animator caroAnim;
     public RawImage right2;
-
     private void Start()
     {
-        string path = "Assets/Resources/test.txt";
-        //Read the text from directly from the test.txt file
-        StreamReader reader = new StreamReader(Directory);
+        StreamReader reader = new StreamReader(configPath + "arcadeConfig.txt");
         readFile = reader.ReadToEnd();
         reader.Close();
         lines = readFile.Split('\n');
         gameCount = (lines.Length / 14)+1;
         for (int i = 0; i<gameCount; i++)
         {
-            
             int index = (i) * (14);
             UnityEngine.Debug.Log("INDEX IS " + index);
             titles.Add(lines[index + 2]);
@@ -65,7 +61,7 @@ public class launcherHost : MonoBehaviour
     }
     private void Update()
     {
-        player.enabled = (!creatorText.text.Contains("Game Design Club"));
+        player.enabled = (!creatorText.text.Contains("Miami Game Design Club"));
         topShowImage.SetActive(Time.realtimeSinceStartup < topImageTime);
         if (Time.realtimeSinceStartup > topImageTime)
         {
@@ -73,14 +69,14 @@ public class launcherHost : MonoBehaviour
             {
                 if (Time.realtimeSinceStartup > inputTime)
                 {
-                    if (Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKeyDown(KeyCode.G))
+                    if (Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKeyDown(KeyCode.D))
                     {
                         inputTime = Time.realtimeSinceStartup + 1f;
                         gameIndex++;
                         caroAnim.Play("caroLeft");
                         loadGame(gameIndex);
                     }
-                    else if (Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.D))
+                    else if (Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.A))
                     {
                         caroAnim.Play("caroRight");
                         inputTime = Time.realtimeSinceStartup + 1f;
@@ -89,7 +85,7 @@ public class launcherHost : MonoBehaviour
                     }
                 }
             }
-            if ((Input.GetKeyDown(KeyCode.Z) || Input.GetKeyDown(KeyCode.X) || Input.GetKeyDown(KeyCode.C) || Input.GetKeyDown(KeyCode.V) || Input.GetKeyDown(KeyCode.B) || Input.GetKeyDown(KeyCode.Space)) || (Input.GetKeyDown(KeyCode.Q) || Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.I) || Input.GetKeyDown(KeyCode.K)))
+            if (Input.anyKeyDown && (!Input.GetKeyDown(KeyCode.A) && !Input.GetKeyDown(KeyCode.D)))
             {
                 if (mgdcImage.activeInHierarchy || !creatorText.text.Contains("Game Design Club"))
                 {
@@ -100,7 +96,6 @@ public class launcherHost : MonoBehaviour
                 }
                 else
                     mgdcImage.SetActive(true);
-
             }
         }
     }
@@ -116,17 +111,28 @@ public class launcherHost : MonoBehaviour
         {
             input.enabled = true;
             string path = images[index];
-
             int exeIndex = path.LastIndexOf(".png");
             if (exeIndex != -1)
             {
                 path = path.Substring(0, exeIndex + 4); // Adding 4 to include ".exe"
             }
+            UnityEngine.Debug.Log(path);
+            string filePath = "file://" + configPath + path;
 
-            var www = UnityWebRequestTexture.GetTexture("file://" + path);
+            UnityWebRequest www = UnityWebRequestTexture.GetTexture(filePath);
+            UnityEngine.Debug.Log("Requesting texture at path: " + filePath);
+
             yield return www.SendWebRequest();
-            Texture2D tex = DownloadHandlerTexture.GetContent(www);
-            input.texture = tex;
+
+            if (www.result != UnityWebRequest.Result.Success)
+            {
+                UnityEngine.Debug.LogError("Error loading texture: " + www.error);
+            }
+            else
+            {
+                Texture2D tex = DownloadHandlerTexture.GetContent(www);
+                input.texture = tex;
+            }
         }
     }
     public void loadGame(int index)
@@ -139,7 +145,6 @@ public class launcherHost : MonoBehaviour
             else
                 index += gameCount;
         }
-        
         {
             libraryObject.gameObject.GetComponent<Animator>().Play("NextGame");
             gameIndex = index;
@@ -170,7 +175,6 @@ public class launcherHost : MonoBehaviour
         {
             inputDirectory = inputDirectory.Substring(0, exeIndex + 4); // Adding 4 to include ".exe"
         }
-
         p = new Process();
         p.StartInfo.UseShellExecute = true;
         p.StartInfo.FileName = inputDirectory;
@@ -178,6 +182,5 @@ public class launcherHost : MonoBehaviour
         {
             lastRunTime = Time.realtimeSinceStartup + 5;
         }
-        
     }
 }
