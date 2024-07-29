@@ -763,7 +763,7 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: 'This is a game made from start to finish in <4 hours by the Miami University
-    Game Design Club. All experience levels are welcome as it is a rapid excersize
+    Game Design Club. All experience levels are welcome as it is a rapid excercise
     to learn about completing games from start to finish.
 
 
@@ -2769,7 +2769,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Use Joystick to Select
+  m_Text: Use A and D to select
 --- !u!222 &2030590020
 CanvasRenderer:
   m_ObjectHideFlags: 0
