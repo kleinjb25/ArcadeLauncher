@@ -4,7 +4,7 @@ Gorg Story
 Creator:
 Miami Game Design Club
 Description:
-3D Platformer About Gorg
+Enter Gorg, the goblin. You're a typical, average, everyday goblin who works at the Lord's coal mine. It's an awful job, but at least it pays. Doesn't make things any easier when there's a cave-in, and the mine collapses. To get out of this cave, you need to jump (left click) and strafe (look with the mouse) your way through the collapsed mine to freedom.
 Players:
 1 Player
 Image:
@@ -18,7 +18,7 @@ Ohio Simulator
 Creator:
 Miami Game Design Club
 Description:
-Ohio Simulator
+How it is to drive in Ohio.
 Players:
 1 Player
 Image:
@@ -32,7 +32,7 @@ Cupid Sim
 Creator:
 Miami Game Design Club
 Description:
-Cupid Sim
+What it's like to be Cupid. Use W, A, S, and D to move, spacebar to fly, left click to shoot, R to reload, P to restart, and ESC to quit.
 Players:
 1 Player
 Image:
@@ -46,7 +46,7 @@ Miami Guys
 Creator:
 Miami Game Design Club
 Description:
-Miami Guys
+Compete with your friend in a race to stay alive as long as possible by jumping on randomly generated platforms. With unpredictable platform generation, each new game is a different challenge. Can you survive and come out on top? Now with a solo gamemode!
 Players:
 1-2 Players
 Image:
@@ -60,7 +60,7 @@ Crawformon
 Creator:
 Miami Game Design Club
 Description:
-Crawformon
+As the sun beats down on Upham Hall, a hush falls over the crowd gathered around the Seal. Towards King Library stands the proud and powerful President Crawford (Kraw Daddy), his eyes fixed on you with an intense gaze. On the other side, towards Upham Hall, stands you, a daring student with a fierce determination to show Kraw Daddy who's boss around here.
 Players:
 1 Player
 Image:
@@ -74,7 +74,7 @@ Astra Eternum
 Creator:
 Miami Game Design Club
 Description:
-Cat Platformer
+Grapple your way towards the exit to escape the spaceship! Left click to grapple, and let go with spacebar.
 Players:
 1 Player
 Image:
@@ -88,7 +88,7 @@ Jungle Tanks
 Creator:
 Miami Game Design Club
 Description:
-Jungle Tanks
+Wii Tanks, but in the Jungle! Use W, A, S, and D to move, and left click to shoot.
 Players:
 1 Player
 Image:
@@ -102,7 +102,7 @@ Kardboard Kombat
 Creator:
 Miami Game Design Club
 Description:
-Kardboard Kombat
+Fight to the death as two stick figures on a notebook!
 Players:
 2 Players
 Image:
@@ -116,7 +116,7 @@ Halloween Minigames
 Creator:
 Miami Game Design Club
 Description:
-Halloween Minigames
+Get into the halloween spirit with 3 themed minigames! Apple Bobbing: click on the normal apples and avoid the monster apples. Imposter House: use W, A, S, and D to move, and avoid the imposter! Candy collect: use W, A, S, and D to move, spacebar to jump, and collect the candy corn.
 Players:
 1 Player
 Image:
@@ -130,7 +130,7 @@ Turkey Hunting
 Creator:
 Miami Game Design Club
 Description:
-Turkey Hunting
+Survive against the turkey onslaught! Use W, A, S, and D to move, and spacebar to shoot. 
 Players:
 1 Player
 Image:
@@ -144,7 +144,7 @@ Redhawk Dash
 Creator:
 Miami Game Design Club
 Description:
-Redhawk Dash
+Platform your way over spikes to victory in this Miami University-themed Geometry Dash reimagining! Use spacebar to jump. 
 Players:
 1 Player
 Image:
@@ -158,7 +158,7 @@ Clown Punching
 Creator:
 Miami Game Design Club
 Description:
-Clown Punching
+Punch as many clowns as you can! Use W, A, S, and D to move, and left click to punch. 
 Players:
 1 Player
 Image:
@@ -172,7 +172,7 @@ Circus Shootout
 Creator:
 Miami Game Design Club
 Description:
-Circus Shootout
+You've just been hired as a new intern for the circus act! Your performance: Shooting as many targets as quickly as possible! Use the mouse to look around and left click to shoot.
 Players:
 1 Player
 Image:
@@ -186,7 +186,7 @@ Mini Golf
 Creator:
 Miami Game Design Club
 Description:
-Mini Golf
+Putt your way through an old pirate cove in search of treasure, cook up some fun times in a pizzeria, and finish off with a relaxing Sunday stroll through Old MacDonald's Barnyard! Use A and D to position your shot, hold spacebar to charge it up, and release spacebar to shoot.
 Players:
 1 Player
 Image:
@@ -200,7 +200,7 @@ Crab Racing
 Creator:
 Miami Game Design Club
 Description:
-Crab Racing
+Shoot through the air as a hermit crab in pursuit of your newest shell! Hop onto your beach towel and zoom past sand castles and the like to the finish line! Use W, A, S, and D to move.
 Players:
 1 Player
 Image:
@@ -214,7 +214,7 @@ Miami Hero
 Creator:
 Miami Game Design Club
 Description:
-Miami Hero
+Play some of your favorite tunes in our Guitar Hero inspired Rhythm game! Press D, F, J, or K to hit the notes at the right time.
 Players:
 1 Player
 Image:
@@ -228,7 +228,7 @@ GasCar
 Creator:
 Miami Game Design Club
 Description:
-GasCar
+Zoom your way through an adrenaline-inducing racing adventure along our custom-built track! Hit high speeds and make epic turns in our classic racing experience!
 Players:
 1 Player
 Image:
@@ -242,7 +242,7 @@ Miami Balancing
 Creator:
 Miami Game Design Club
 Description:
-Miami Balancing
+Celebrate the end of the 2023-2024 school year with us and build up some Love and Honor™ against a bright joy-filled night-time backdrop in our new stacking puzzle game! Kick back and relax as you build Miami school spirit - literally! Press any button or left click to drop a block. Use the white box at the top to gauge when to drop it.
 Players:
 1 Player
 Image:

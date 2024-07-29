@@ -84,7 +84,7 @@ public class launcherHost : MonoBehaviour
                     }
                 }
             }
-            if (Input.anyKeyDown && (!Input.GetKeyDown(KeyCode.A) && !Input.GetKeyDown(KeyCode.D)))
+            if (Input.anyKeyDown && (!Input.GetKeyDown(KeyCode.A) && !Input.GetKeyDown(KeyCode.D) && !Input.GetKeyDown(KeyCode.RightArrow) && !Input.GetKeyDown(KeyCode.LeftArrow)))
             {
                 if (mgdcImage.activeInHierarchy || !creatorText.text.Contains("Miami Game Design Club"))
                 {
