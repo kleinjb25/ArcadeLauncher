@@ -49,7 +49,6 @@ public class launcherHost : MonoBehaviour
         for (int i = 0; i<gameCount; i++)
         {
             int index = (i) * (14);
-            UnityEngine.Debug.Log("INDEX IS " + index);
             titles.Add(lines[index + 2]);
             creators.Add(lines[index + 4]);
             descriptions.Add(lines[index + 6]);
@@ -87,10 +86,9 @@ public class launcherHost : MonoBehaviour
             }
             if (Input.anyKeyDown && (!Input.GetKeyDown(KeyCode.A) && !Input.GetKeyDown(KeyCode.D)))
             {
-                if (mgdcImage.activeInHierarchy || !creatorText.text.Contains("Game Design Club"))
+                if (mgdcImage.activeInHierarchy || !creatorText.text.Contains("Miami Game Design Club"))
                 {
                     mgdcImage.SetActive(false);
-                    UnityEngine.Debug.Log("THE DIRECTORY IS a" + directories[gameIndex] + "asdfasdfasdfasdfasdfasdf");
                     topImageTime = Time.realtimeSinceStartup + 15;
                     runFile(directories[gameIndex]);
                 }
@@ -116,11 +114,9 @@ public class launcherHost : MonoBehaviour
             {
                 path = path.Substring(0, exeIndex + 4); // Adding 4 to include ".exe"
             }
-            UnityEngine.Debug.Log(path);
             string filePath = "file://" + configPath + path;
 
             UnityWebRequest www = UnityWebRequestTexture.GetTexture(filePath);
-            UnityEngine.Debug.Log("Requesting texture at path: " + filePath);
 
             yield return www.SendWebRequest();
 
