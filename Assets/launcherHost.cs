@@ -7,12 +7,20 @@ using System.IO;
 using UnityEngine.Networking;
 using System.Diagnostics;
 using UnityEngine.Video;
+
+/*
+Some important things:
+1. The config file, and the thumbnail images, must be in the "FolderWithConfig" folder, and the config file must be named "arcadeConfig.txt".
+2. When a game is added, the unzipped folder of the built game must be put in the main folder (the one with the assets, library, logs, and other folders).
+In the config file, the path to the exe must be specified, starting with the base folder of the unzipped game.
+3. When adding a game, make sure there is only a blank line between games in the config, but NOT as the last line in the file.
+Also, make sure you configure Git LFS if you add a game more than 100 MB.
+*/
 public class launcherHost : MonoBehaviour
 {
     public VideoPlayer player;
     string configPath = Application.dataPath + "/FolderWithConfig/";
-    public string readFile;
-    public InputField textInput;
+    string readFile;
     public List<String> titles;
     public List<String> creators;
     public List<String> descriptions;
@@ -45,8 +53,8 @@ public class launcherHost : MonoBehaviour
         readFile = reader.ReadToEnd();
         reader.Close();
         lines = readFile.Split('\n');
-        gameCount = (lines.Length / 14)+1;
-        for (int i = 0; i<gameCount; i++)
+        gameCount = (lines.Length / 14) + 1;
+        for (int i = 0; i < gameCount; i++)
         {
             int index = (i) * (14);
             titles.Add(lines[index + 2]);
@@ -84,7 +92,7 @@ public class launcherHost : MonoBehaviour
                     }
                 }
             }
-            if (Input.anyKeyDown && (!Input.GetKeyDown(KeyCode.A) && !Input.GetKeyDown(KeyCode.D) && !Input.GetKeyDown(KeyCode.RightArrow) && !Input.GetKeyDown(KeyCode.LeftArrow)))
+            if (Input.GetKeyDown(KeyCode.Space) && (!Input.GetKeyDown(KeyCode.A) && !Input.GetKeyDown(KeyCode.D) && !Input.GetKeyDown(KeyCode.RightArrow) && !Input.GetKeyDown(KeyCode.LeftArrow) && !Input.GetKeyDown(KeyCode.Escape)))
             {
                 if (mgdcImage.activeInHierarchy || !creatorText.text.Contains("Miami Game Design Club"))
                 {
@@ -149,12 +157,13 @@ public class launcherHost : MonoBehaviour
             creatorText.text = creators[index];
             descriptionText.text = descriptions[index];
             playerCountText.text = playerCounts[index];
-            StartCoroutine(LoadImageFromIndex(index-2, left2));
+            StartCoroutine(LoadImageFromIndex(index - 2, left2));
             StartCoroutine(LoadImageFromIndex(index - 1, left1));
             StartCoroutine(LoadImageFromIndex(index, gameImage));
             StartCoroutine(LoadImageFromIndex(index, center));
             StartCoroutine(LoadImageFromIndex(index + 1, right1));
             StartCoroutine(LoadImageFromIndex(index + 2, right2));
+
         }
     }
     Process p;
